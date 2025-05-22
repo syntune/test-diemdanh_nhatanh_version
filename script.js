@@ -187,7 +187,6 @@ db.ref("members").on("value", snapshot => {
   const data = snapshot.val();
   if (data) {
     members = data;
-    db.ref("members").set(members);
     renderMembers(); // Gọi lại hàm hiển thị
   }
 });
