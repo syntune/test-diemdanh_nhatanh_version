@@ -86,6 +86,7 @@ window.markAttendance = function (id) {
   }
 
   member.status = "Có mặt";
+   db.ref("members").set(members);
   attendanceHistory.push({ id: member.id, name: member.name, date: getCurrentDate() });
 
   localStorage.setItem("attendanceHistory", JSON.stringify(attendanceHistory));
